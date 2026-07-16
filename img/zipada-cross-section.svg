@@ -1,0 +1,70 @@
+<svg viewBox="0 0 800 560" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="560" fill="#1A2330"/>
+
+  <!-- TITLE -->
+  <text x="400" y="44" text-anchor="middle" font-family="sans-serif" font-size="17" font-weight="700" fill="#D4A84B" letter-spacing="3">CORTE TRANSVERSAL — SISTEMA ZIPADO</text>
+  <line x1="180" y1="56" x2="620" y2="56" stroke="#D4A84B" stroke-width="0.5" opacity="0.25"/>
+
+  <!-- STRUCTURE (terça/purlin) -->
+  <rect x="100" y="420" width="600" height="20" rx="3" fill="#3A4A5E"/>
+  <rect x="100" y="420" width="600" height="20" rx="3" fill="none" stroke="#5A7A96" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- INSULATION -->
+  <rect x="100" y="340" width="600" height="80" rx="2" fill="#F5F1E8" fill-opacity="0.12"/>
+  <rect x="100" y="340" width="600" height="80" rx="2" fill="none" stroke="#D4A84B" stroke-width="0.5" stroke-opacity="0.15" stroke-dasharray="3 3"/>
+
+  <!-- LEFT PANEL -->
+  <path d="M200 120 L200 340 L350 340 L370 190 L370 120 Z" fill="#2A3A4E" stroke="#4A5E76" stroke-width="1.5"/>
+  <path d="M200 140 L200 340 L340 340 L340 140 Z" fill="#3A4A5E" fill-opacity="0.4"/>
+
+  <!-- RIGHT PANEL -->
+  <path d="M430 120 L430 190 L450 340 L600 340 L600 120 Z" fill="#2A3A4E" stroke="#4A5E76" stroke-width="1.5"/>
+  <path d="M460 140 L460 340 L600 340 L600 140 Z" fill="#3A4A5E" fill-opacity="0.4"/>
+
+  <!-- STANDING LEGS -->
+  <rect x="195" y="120" width="14" height="220" rx="2" fill="#3A4A5E" stroke="#4A5E76" stroke-width="1"/>
+  <rect x="591" y="120" width="14" height="220" rx="2" fill="#3A4A5E" stroke="#4A5E76" stroke-width="1"/>
+
+  <!-- ZIPADA SEAM / JUNTA -->
+  <path d="M370 120 L370 75 L380 55 L400 50 L420 55 L430 75 L430 120" fill="none" stroke="#D4A84B" stroke-width="3"/>
+  <path d="M373 95 L427 95" stroke="#D4A84B" stroke-width="1.5" opacity="0.4"/>
+  <path d="M378 108 L422 108" stroke="#D4A84B" stroke-width="1" opacity="0.3"/>
+  <circle cx="400" cy="50" r="3" fill="#D4A84B"/>
+
+  <!-- HIDDEN CLIP -->
+  <path d="M360 340 L360 280 L375 265 L425 265 L440 280 L440 340" fill="none" stroke="#D4A84B" stroke-width="2" stroke-dasharray="5 3" opacity="0.6"/>
+  <circle cx="400" cy="295" r="6" fill="none" stroke="#D4A84B" stroke-width="1.5" opacity="0.4"/>
+  <circle cx="400" cy="295" r="2" fill="#D4A84B"/>
+
+  <!-- LABELS -->
+  <g font-family="sans-serif" font-size="11" fill="#D4A84B">
+    <!-- Seam -->
+    <line x1="400" y1="48" x2="400" y2="20" stroke="#D4A84B" stroke-width="0.5" opacity="0.5"/>
+    <text x="400" y="14" text-anchor="middle" font-weight="700" font-size="10" letter-spacing="1.5">ZIPAGEM</text>
+
+    <!-- Panel -->
+    <line x1="250" y1="180" x2="250" y2="155" stroke="#D4A84B" stroke-width="0.5" opacity="0.5"/>
+    <text x="250" y="150" text-anchor="middle" font-weight="700" font-size="10" letter-spacing="1.5">CHAPA METÁLICA</text>
+
+    <!-- Clip -->
+    <line x1="425" y1="300" x2="620" y2="300" stroke="#D4A84B" stroke-width="0.5" opacity="0.5"/>
+    <text x="630" y="304" font-weight="700" font-size="10" letter-spacing="1.5">CLIPE OCULTO</text>
+
+    <!-- Insulation -->
+    <line x1="100" y1="380" x2="70" y2="380" stroke="#D4A84B" stroke-width="0.5" opacity="0.5"/>
+    <text x="18" y="384" font-weight="700" font-size="10" letter-spacing="1.5">ISOLAMENTO</text>
+
+    <!-- Structure -->
+    <line x1="100" y1="430" x2="70" y2="462" stroke="#D4A84B" stroke-width="0.5" opacity="0.5"/>
+    <text x="18" y="466" font-weight="700" font-size="10" letter-spacing="1.5">ESTRUTURA</text>
+  </g>
+
+  <!-- LEGEND FOOTER -->
+  <rect x="50" y="490" width="700" height="48" rx="6" fill="#D4A84B" fill-opacity="0.04" stroke="#D4A84B" stroke-width="0.5" stroke-opacity="0.12"/>
+  <g font-family="sans-serif" font-size="10" fill="#FFFFFF" fill-opacity="0.4">
+    <text x="70" y="512">Sem parafusos ou furos na chapa</text>
+    <text x="70" y="528">Dilatação térmica livre — sem empenamento</text>
+    <text x="380" y="512">Junta contínua — estanqueidade total</text>
+    <text x="380" y="528">Inclinação mínima de 2,5%</text>
+  </g>
+</svg>
