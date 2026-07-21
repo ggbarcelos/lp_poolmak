@@ -1,116 +1,25 @@
-<svg viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="500" fill="#0A0F14"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" fill="none">
   <defs>
-    <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#D4A84B"/>
-      <stop offset="100%" stop-color="#F0D68A"/>
-    </linearGradient>
-    <linearGradient id="steelGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#4A5E76"/>
-      <stop offset="100%" stop-color="#2A3A4E"/>
+    <linearGradient id="gG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C89B3C"/>
+      <stop offset="100%" stop-color="#E8C86A"/>
     </linearGradient>
   </defs>
-
-  <!-- Title -->
-  <text x="400" y="45" text-anchor="middle" font-family="Syne, sans-serif" font-size="18" font-weight="700" fill="#D4A84B" letter-spacing="4">PROCESSO DE ZIPAGEM</text>
-  <line x1="180" y1="57" x2="620" y2="57" stroke="#D4A84B" stroke-width="0.5" opacity="0.3"/>
-
-  <!-- STEP 1: Bobina -->
-  <g transform="translate(80, 100)">
-    <rect x="0" y="0" width="160" height="180" rx="12" fill="#1A2330" stroke="#2A3A4E" stroke-width="1"/>
-    <!-- Coil -->
-    <circle cx="80" cy="100" r="40" fill="none" stroke="#4A5E76" stroke-width="3"/>
-    <circle cx="80" cy="100" r="30" fill="none" stroke="#3A4A5E" stroke-width="2"/>
-    <circle cx="80" cy="100" r="20" fill="none" stroke="#4A5E76" stroke-width="2"/>
-    <circle cx="80" cy="100" r="5" fill="#D4A84B"/>
-    <text x="80" y="165" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#D4A84B" letter-spacing="1">BOBINA METÁLICA</text>
-  </g>
-
-  <!-- Arrow 1 -->
-  <g transform="translate(240, 180)">
-    <text x="15" y="5" font-family="DM Mono, monospace" font-size="11" fill="#D4A84B">01</text>
-    <line x1="0" y1="15" x2="40" y2="15" stroke="#D4A84B" stroke-width="1" stroke-dasharray="3 3"/>
-    <polygon points="40,11 48,15 40,19" fill="#D4A84B"/>
-  </g>
-
-  <!-- STEP 2: Perfilação -->
-  <g transform="translate(310, 100)">
-    <rect x="0" y="0" width="160" height="180" rx="12" fill="#1A2330" stroke="#2A3A4E" stroke-width="1"/>
-    <!-- Roll-forming machine -->
-    <rect x="25" y="50" width="110" height="80" rx="8" fill="none" stroke="#4A5E76" stroke-width="2"/>
-    <!-- Rollers -->
-    <circle cx="45" cy="70" r="8" fill="none" stroke="#D4A84B" stroke-width="1.5"/>
-    <circle cx="65" cy="70" r="8" fill="none" stroke="#D4A84B" stroke-width="1.5"/>
-    <circle cx="85" cy="70" r="8" fill="none" stroke="#D4A84B" stroke-width="1.5"/>
-    <circle cx="105" cy="70" r="8" fill="none" stroke="#D4A84B" stroke-width="1.5"/>
-    <circle cx="55" cy="95" r="8" fill="none" stroke="#D4A84B" stroke-width="1.5"/>
-    <circle cx="75" cy="95" r="8" fill="none" stroke="#D4A84B" stroke-width="1.5"/>
-    <circle cx="95" cy="95" r="8" fill="none" stroke="#D4A84B" stroke-width="1.5"/>
-    <!-- Sheet coming out -->
-    <rect x="25" y="40" width="110" height="4" rx="1" fill="#D4A84B" opacity="0.4"/>
-    <line x1="25" y1="42" x2="25" y2="130" stroke="#D4A84B" stroke-width="0.5" opacity="0.2"/>
-    <text x="80" y="165" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#D4A84B" letter-spacing="1">PERFILAÇÃO</text>
-  </g>
-
-  <!-- Arrow 2 -->
-  <g transform="translate(470, 180)">
-    <text x="15" y="5" font-family="DM Mono, monospace" font-size="11" fill="#D4A84B">02</text>
-    <line x1="0" y1="15" x2="40" y2="15" stroke="#D4A84B" stroke-width="1" stroke-dasharray="3 3"/>
-    <polygon points="40,11 48,15 40,19" fill="#D4A84B"/>
-  </g>
-
-  <!-- STEP 3: Zipagem -->
-  <g transform="translate(540, 100)">
-    <rect x="0" y="0" width="160" height="180" rx="12" fill="#1A2330" stroke="#D4A84B" stroke-width="1"/>
-    <!-- Zipagem machine -->
-    <rect x="20" y="55" width="120" height="70" rx="6" fill="none" stroke="#D4A84B" stroke-width="1.5"/>
-    <rect x="20" y="55" width="120" height="35" rx="6" fill="#D4A84B" opacity="0.08"/>
-    <!-- Seam detail -->
-    <path d="M60 90 L80 90 L80 60 L70 50 L60 60 L60 90" fill="none" stroke="#D4A84B" stroke-width="2"/>
-    <path d="M100 90 L120 90 L120 60 L110 50 L100 60 L100 90" fill="none" stroke="#D4A84B" stroke-width="2"/>
-    <!-- Zipper teeth -->
-    <line x1="75" y1="55" x2="105" y2="55" stroke="#F0D68A" stroke-width="2"/>
-    <line x1="78" y1="60" x2="102" y2="60" stroke="#D4A84B" stroke-width="1" opacity="0.5"/>
-    <!-- Sparks -->
-    <circle cx="110" cy="50" r="2" fill="#F0D68A" opacity="0.6"/>
-    <circle cx="115" cy="45" r="1.5" fill="#D4A84B" opacity="0.4"/>
-    <text x="80" y="165" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="700" fill="#D4A84B" letter-spacing="1">ZIPAGEM</text>
-    <text x="80" y="178" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="rgba(255,255,255,0.35)" letter-spacing="1">COSTURA MECÂNICA</text>
-  </g>
-
-  <!-- Bottom detail: before/after -->
-  <g transform="translate(100, 340)">
-    <text x="0" y="0" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="rgba(255,255,255,0.3)" letter-spacing="2">ANTES</text>
-
-    <!-- Before: visible screw -->
-    <g transform="translate(0, 15)">
-      <rect x="0" y="0" width="40" height="20" rx="3" fill="#2A3A4E" stroke="#4A5E76" stroke-width="1"/>
-      <rect x="0" y="0" width="40" height="20" rx="3" fill="#4A5E76" opacity="0.3"/>
-      <circle cx="20" cy="10" r="3" fill="#D4A84B"/>
-      <line x1="20" y1="10" x2="20" y2="17" stroke="#D4A84B" stroke-width="1"/>
-      <line x1="23" y1="7" x2="27" y2="3" stroke="#D4A84B" stroke-width="0.5" opacity="0.5"/>
-      <line x1="17" y1="7" x2="13" y2="3" stroke="#D4A84B" stroke-width="0.5" opacity="0.5"/>
-      <text x="20" y="38" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="rgba(255,255,255,0.25)">Parafuso exposto</text>
-      <text x="20" y="49" text-anchor="middle" font-family="Inter, sans-serif" font-size="8" fill="rgba(255,255,255,0.15)">Ponto de falha</text>
-    </g>
-
-    <!-- Arrow between -->
-    <g transform="translate(75, 15)">
-      <line x1="0" y1="10" x2="30" y2="10" stroke="#D4A84B" stroke-width="1" stroke-dasharray="3 3"/>
-      <polygon points="30,6 38,10 30,14" fill="#D4A84B"/>
-    </g>
-
-    <!-- After: zipada seamless -->
-    <g transform="translate(130, 15)">
-      <rect x="0" y="0" width="60" height="20" rx="3" fill="#2A3A4E" stroke="#D4A84B" stroke-width="1"/>
-      <path d="M15 0 L15 10 L25 10 L25 0" fill="#D4A84B" opacity="0.3"/>
-      <path d="M35 0 L35 10 L45 10 L45 0" fill="#D4A84B" opacity="0.3"/>
-      <line x1="15" y1="10" x2="25" y2="10" stroke="#D4A84B" stroke-width="1.5"/>
-      <line x1="35" y1="10" x2="45" y2="10" stroke="#D4A84B" stroke-width="1.5"/>
-      <text x="30" y="38" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#D4A84B">Junta zipada contínua</text>
-      <text x="30" y="49" text-anchor="middle" font-family="Inter, sans-serif" font-size="8" fill="rgba(255,255,255,0.2)">Sem parafusos — estanque</text>
-    </g>
-
-    <text x="190" y="0" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#D4A84B" letter-spacing="2">DEPOIS</text>
-  </g>
+  <rect x="30" y="30" width="740" height="240" rx="16" fill="#1A2330"/>
+  <circle cx="100" cy="110" r="32" fill="rgba(200,155,60,0.1)" stroke="#C89B3C" stroke-width="1.5"/>
+  <text x="100" y="116" text-anchor="middle" fill="#C89B3C" font-family="system-ui" font-size="22" font-weight="700">1</text>
+  <text x="100" y="170" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-family="system-ui" font-size="12">Bobina de aço</text>
+  <line x1="132" y1="110" x2="200" y2="110" stroke="rgba(200,155,60,0.3)" stroke-width="2" stroke-dasharray="4 4"/>
+  <circle cx="260" cy="110" r="32" fill="rgba(200,155,60,0.1)" stroke="#C89B3C" stroke-width="1.5"/>
+  <text x="260" y="116" text-anchor="middle" fill="#C89B3C" font-family="system-ui" font-size="22" font-weight="700">2</text>
+  <text x="260" y="170" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-family="system-ui" font-size="12">Perfilação</text>
+  <line x1="292" y1="110" x2="360" y2="110" stroke="rgba(200,155,60,0.3)" stroke-width="2" stroke-dasharray="4 4"/>
+  <circle cx="420" cy="110" r="32" fill="rgba(200,155,60,0.1)" stroke="#C89B3C" stroke-width="1.5"/>
+  <text x="420" y="116" text-anchor="middle" fill="#C89B3C" font-family="system-ui" font-size="22" font-weight="700">3</text>
+  <text x="420" y="170" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-family="system-ui" font-size="12">Zipagem</text>
+  <line x1="452" y1="110" x2="520" y2="110" stroke="rgba(200,155,60,0.3)" stroke-width="2" stroke-dasharray="4 4"/>
+  <circle cx="580" cy="110" r="32" fill="#C89B3C"/>
+  <text x="580" y="116" text-anchor="middle" fill="#0A0F14" font-family="system-ui" font-size="22" font-weight="700">4</text>
+  <text x="580" y="170" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-family="system-ui" font-size="12">Cobertura</text>
+  <rect x="70" y="210" width="660" height="3" rx="1.5" fill="url(#gG)" opacity="0.3"/>
 </svg>
