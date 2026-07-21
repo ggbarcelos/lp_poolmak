@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800;900&display=swap');
 
 :root {
   --ink: #0A0F14;
@@ -26,14 +26,14 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   color: var(--ink);
   background: var(--white);
   -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Syne', 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Montserrat', 'Inter', sans-serif;
   font-weight: 700;
   letter-spacing: -0.03em;
 }
@@ -380,7 +380,7 @@ a { text-decoration: none; }
 }
 .stat { display: flex; flex-direction: column; }
 .stat-num {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.8rem;
   font-weight: 800;
   color: var(--white);
@@ -565,7 +565,7 @@ a { text-decoration: none; }
   transform: translateY(-2px);
 }
 .step-num {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 2.8rem;
   font-weight: 900;
   color: rgba(200,155,60,0.08);
@@ -762,7 +762,7 @@ a { text-decoration: none; }
   margin-bottom: 6px;
 }
 .spec-value {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   font-weight: 700;
   color: var(--ink);
@@ -865,7 +865,7 @@ a { text-decoration: none; }
   background: none;
   border: none;
   cursor: pointer;
-  font-family: 'Syne', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--ink);
