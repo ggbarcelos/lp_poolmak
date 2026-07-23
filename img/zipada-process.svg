@@ -1,25 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" fill="none">
   <defs>
-    <linearGradient id="gG" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#C89B3C"/>
-      <stop offset="100%" stop-color="#E8C86A"/>
+    <linearGradient id="gP" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7C5EA0"/>
+      <stop offset="100%" stop-color="#C6B1DF"/>
     </linearGradient>
   </defs>
   <rect x="30" y="30" width="740" height="240" rx="16" fill="#1A2330"/>
-  <circle cx="100" cy="110" r="32" fill="rgba(200,155,60,0.1)" stroke="#C89B3C" stroke-width="1.5"/>
-  <text x="100" y="116" text-anchor="middle" fill="#C89B3C" font-family="system-ui" font-size="22" font-weight="700">1</text>
+  <circle cx="100" cy="110" r="32" fill="rgba(124,94,160,0.1)" stroke="#7C5EA0" stroke-width="1.5"/>
+  <text x="100" y="116" text-anchor="middle" fill="#7C5EA0" font-family="system-ui" font-size="22" font-weight="700">1</text>
   <text x="100" y="170" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-family="system-ui" font-size="12">Bobina de aço</text>
-  <line x1="132" y1="110" x2="200" y2="110" stroke="rgba(200,155,60,0.3)" stroke-width="2" stroke-dasharray="4 4"/>
-  <circle cx="260" cy="110" r="32" fill="rgba(200,155,60,0.1)" stroke="#C89B3C" stroke-width="1.5"/>
-  <text x="260" y="116" text-anchor="middle" fill="#C89B3C" font-family="system-ui" font-size="22" font-weight="700">2</text>
+  <line x1="132" y1="110" x2="200" y2="110" stroke="rgba(124,94,160,0.3)" stroke-width="2" stroke-dasharray="4 4"/>
+  <circle cx="260" cy="110" r="32" fill="rgba(124,94,160,0.1)" stroke="#7C5EA0" stroke-width="1.5"/>
+  <text x="260" y="116" text-anchor="middle" fill="#7C5EA0" font-family="system-ui" font-size="22" font-weight="700">2</text>
   <text x="260" y="170" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-family="system-ui" font-size="12">Perfilação</text>
-  <line x1="292" y1="110" x2="360" y2="110" stroke="rgba(200,155,60,0.3)" stroke-width="2" stroke-dasharray="4 4"/>
-  <circle cx="420" cy="110" r="32" fill="rgba(200,155,60,0.1)" stroke="#C89B3C" stroke-width="1.5"/>
-  <text x="420" y="116" text-anchor="middle" fill="#C89B3C" font-family="system-ui" font-size="22" font-weight="700">3</text>
+  <line x1="292" y1="110" x2="360" y2="110" stroke="rgba(124,94,160,0.3)" stroke-width="2" stroke-dasharray="4 4"/>
+  <circle cx="420" cy="110" r="32" fill="rgba(124,94,160,0.1)" stroke="#7C5EA0" stroke-width="1.5"/>
+  <text x="420" y="116" text-anchor="middle" fill="#7C5EA0" font-family="system-ui" font-size="22" font-weight="700">3</text>
   <text x="420" y="170" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-family="system-ui" font-size="12">Zipagem</text>
-  <line x1="452" y1="110" x2="520" y2="110" stroke="rgba(200,155,60,0.3)" stroke-width="2" stroke-dasharray="4 4"/>
-  <circle cx="580" cy="110" r="32" fill="#C89B3C"/>
-  <text x="580" y="116" text-anchor="middle" fill="#0A0F14" font-family="system-ui" font-size="22" font-weight="700">4</text>
+  <line x1="452" y1="110" x2="520" y2="110" stroke="rgba(124,94,160,0.3)" stroke-width="2" stroke-dasharray="4 4"/>
+  <circle cx="580" cy="110" r="32" fill="#7C5EA0"/>
+  <text x="580" y="116" text-anchor="middle" fill="#FFFFFF" font-family="system-ui" font-size="22" font-weight="700">4</text>
   <text x="580" y="170" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-family="system-ui" font-size="12">Cobertura</text>
-  <rect x="70" y="210" width="660" height="3" rx="1.5" fill="url(#gG)" opacity="0.3"/>
+  <rect x="70" y="210" width="660" height="3" rx="1.5" fill="url(#gP)" opacity="0.3"/>
 </svg>
