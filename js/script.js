@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const fullbleed = document.querySelector('[data-parallax]');
   const fullbleedBg = fullbleed?.querySelector('.fullbleed-bg');
   const processSteps = document.querySelector('.process-steps');
+  const parallaxSections = document.querySelectorAll('[data-parallax-bg]');
 
   const onScroll = () => {
     const scrollY = window.scrollY;
@@ -29,9 +30,29 @@ document.addEventListener('DOMContentLoaded', function () {
         fullbleedBg.style.transform = `translateY(${rect.top * 0.15}px)`;
       }
     }
+    parallaxSections.forEach(section => {
+      const bg = section.querySelector('[data-parallax-bg]');
+      if (!bg) return;
+      const rect = section.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        bg.style.transform = `translateY(${rect.top * 0.1}px)`;
+      }
+    });
   };
 
   window.addEventListener('scroll', onScroll, { passive: true });
+
+  // ─── MOUSE SPOTLIGHT ON HERO ───
+  const hero = document.getElementById('hero');
+  if (hero) {
+    hero.addEventListener('mousemove', (e) => {
+      const rect = hero.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      hero.style.setProperty('--spot-x', x + '%');
+      hero.style.setProperty('--spot-y', y + '%');
+    });
+  }
 
   // ─── COUNTERS ───
   const counters = document.querySelectorAll('.counter');
@@ -92,27 +113,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // ─── REVEAL ON SCROLL ───
   const revealElements = document.querySelectorAll(
-    '.step, .v-card, .spec-item, .faq-item, .sobre-card, .features-mini div, .gallery-item'
+    '.step, .v-card, .faq-item, .sobre-card, .features-mini div, .gallery-cell'
   );
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const parent = entry.target.parentNode;
         const idx = Array.from(parent.children).indexOf(entry.target);
-        entry.target.style.transitionDelay = `${idx * 60}ms`;
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
+        entry.target.style.transitionDelay = `${idx * 80}ms`;
         entry.target.classList.add('visible');
         revealObserver.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1 });
-  revealElements.forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(24px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    revealObserver.observe(el);
-  });
+  }, { threshold: 0.08 });
+  revealElements.forEach(el => revealObserver.observe(el));
 
   // ─── PROCESS CONNECTOR ───
   if (processSteps) {
@@ -126,6 +140,26 @@ document.addEventListener('DOMContentLoaded', function () {
     }, { threshold: 0.3 });
     stepsObserver.observe(processSteps);
   }
+
+  // ─── 3D TILT ON CARDS ───
+  const tiltElements = document.querySelectorAll('.sobre-card, .v-card');
+  tiltElements.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const rotateX = ((y - centerY) / centerY) * -6;
+      const rotateY = ((x - centerX) / centerX) * 6;
+      card.style.setProperty('--rx', rotateX + 'deg');
+      card.style.setProperty('--ry', rotateY + 'deg');
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.setProperty('--rx', '0deg');
+      card.style.setProperty('--ry', '0deg');
+    });
+  });
 
   // ─── IMAGE RANDOMIZER ───
   const imageBase = 'img/used/';
@@ -161,25 +195,21 @@ document.addEventListener('DOMContentLoaded', function () {
     return shuffled.slice(0, count);
   }
 
-  // Hero background
   const heroImg = document.getElementById('heroImg');
   if (heroImg) {
     heroImg.src = imageBase + getRandomImages(1)[0];
   }
 
-  // Fullbleed background
   const fullbleedImg = document.querySelector('.fullbleed-bg');
   if (fullbleedImg) {
     fullbleedImg.src = imageBase + getRandomImages(1)[0];
   }
 
-  // CTA background
   const ctaImg = document.querySelector('.cta-bg img');
   if (ctaImg) {
     ctaImg.src = imageBase + getRandomImages(1)[0];
   }
 
-  // Gallery auto-rotation
   const galleryCells = document.querySelectorAll('.gallery-cell img');
   if (galleryCells.length) {
     const count = galleryCells.length;
@@ -217,7 +247,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }, { threshold: 0.1 });
     observerGal.observe(gallerySection);
 
-    // Indicators
     const indicatorsContainer = document.querySelector('.gallery-indicators');
     if (indicatorsContainer) {
       const totalShuffles = 6;
@@ -241,7 +270,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // Sobre section card images
   const sobreCards = document.querySelectorAll('.sobre-card:not(.destaque) img');
   if (sobreCards.length) {
     const randomForSobre = getRandomImages(sobreCards.length);
