@@ -25,5 +25,5 @@
   <path d="M350 200 L370 180 L430 180 L450 200" stroke="url(#goldG)" stroke-width="4" fill="none" stroke-linecap="round"/>
   <path d="M450 200 L470 180 L530 180 L550 200" stroke="url(#goldG)" stroke-width="4" fill="none" stroke-linecap="round"/>
   <text x="450" y="165" text-anchor="middle" fill="#C89B3C" font-family="system-ui" font-size="14" font-weight="600">ZIPAGEM DUPLA 360°</text>
-  <text x="450" y="380" text-anchor="middle" fill="#3A4A5E" font-family="system-ui" font-size="12">Corte transversal do sistema de telha zipada PoolMak</text>
+  <text x="450" y="380" text-anchor="middle" fill="#3A4A5E" font-family="system-ui" font-size="12">Corte transversal do sistema de telha zipada Poolmak</text>
 </svg>
