@@ -150,5 +150,52 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  // ─── BEFORE / AFTER SLIDER ───
+  const slider = document.getElementById('compareSlider');
+  if (slider) {
+    const afterWrap = document.getElementById('afterWrap');
+    const handle = document.getElementById('compareHandle');
+    let isDragging = false;
+
+    const setPosition = (x) => {
+      const rect = slider.getBoundingClientRect();
+      let pct = ((x - rect.left) / rect.width) * 100;
+      pct = Math.max(5, Math.min(95, pct));
+      afterWrap.style.width = pct + '%';
+      handle.style.left = pct + '%';
+    };
+
+    const onStart = (e) => {
+      isDragging = true;
+      handle.classList.add('dragging');
+      const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+      setPosition(clientX);
+    };
+
+    const onMove = (e) => {
+      if (!isDragging) return;
+      e.preventDefault();
+      const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+      setPosition(clientX);
+    };
+
+    const onEnd = () => {
+      isDragging = false;
+      handle.classList.remove('dragging');
+    };
+
+    handle.addEventListener('mousedown', onStart);
+    document.addEventListener('mousemove', onMove);
+    document.addEventListener('mouseup', onEnd);
+    handle.addEventListener('touchstart', onStart, { passive: true });
+    document.addEventListener('touchmove', onMove, { passive: false });
+    document.addEventListener('touchend', onEnd);
+
+    // Click on slider to jump
+    slider.addEventListener('click', (e) => {
+      if (!isDragging) setPosition(e.clientX);
+    });
+  }
+
   onScroll();
 });
