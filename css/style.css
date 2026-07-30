@@ -228,7 +228,6 @@ a { text-decoration: none; }
   gap: 5px;
   cursor: pointer;
   padding: 10px;
-  margin: -10px;
   background: none;
   border: none;
   min-width: 44px;
@@ -249,10 +248,12 @@ a { text-decoration: none; }
   display: flex;
   align-items: center;
   background-color: var(--ink);
-  background-image:
-    radial-gradient(1px 1px at 50% 50%, rgba(255,255,255,0.04) 0%, transparent 100%),
-    linear-gradient(135deg, rgba(10,15,20,0.96) 0%, rgba(10,15,20,0.6) 50%, transparent 80%);
-  background-size: 40px 40px, 100% 100%;
+  background-image: 
+    linear-gradient(to right, rgba(10,15,20,0.85) 0%, rgba(10,15,20,0.45) 35%, rgba(10,15,20,0.05) 60%, transparent 78%),
+    url('../img/img_hero.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   overflow: hidden;
 }
 .hero::before {
@@ -417,7 +418,7 @@ a { text-decoration: none; }
   color: var(--white);
   line-height: 1;
 }
-.stat-num .counter { color: var(--purple-light); }
+
 .stat-label {
   font-family: 'Public Sans', 'Raleway', sans-serif;
   font-size: 0.68rem;
@@ -1273,16 +1274,17 @@ a { text-decoration: none; }
 }
 
 @media (max-width: 575.98px) {
-  .hero-content { padding: 90px 0 24px; }
+  .hero { align-items: flex-start; min-height: auto; }
+  .hero-content { padding: 95px 1.25rem 40px; }
   .hero-badge { font-size: 0.6rem; padding: 5px 14px; margin-bottom: 20px; }
   .hero h1 { font-size: clamp(1.5rem, 8vw, 1.8rem); margin-bottom: 12px; }
   .hero-subtitle { font-size: 0.85rem; margin-bottom: 22px; }
   .hero-actions { flex-direction: column; gap: 10px; margin-bottom: 28px; }
   .hero-actions .btn { width: 100%; justify-content: center; padding: 14px 28px; font-size: 0.85rem; }
-  .hero-stats { flex-direction: row; flex-wrap: wrap; gap: 8px; padding-top: 18px; }
-  .stat { min-width: calc(50% - 8px); align-items: center; text-align: center; }
-  .stat-num { font-size: 1.15rem; }
-  .stat-label { font-size: 0.58rem; }
+  .hero-stats { display: none; }
+  .stat { align-items: center; text-align: center; }
+  .stat-num { font-size: 1rem; white-space: nowrap; }
+  .stat-label { font-size: 0.55rem; }
 
   .section { padding: 60px 0; }
   .section-title { font-size: 1.5rem; }
