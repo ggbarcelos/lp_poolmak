@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // ─── REVEAL ON SCROLL ───
   const revealElements = document.querySelectorAll(
-    '.step, .v-card, .faq-item, .gallery-cell'
+    '.step, .v-card, .v-card-industry, .faq-item, .gallery-cell'
   );
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
