@@ -9,12 +9,42 @@ document.addEventListener('DOMContentLoaded', function () {
       const isOpen = links.classList.toggle('open');
       toggle.setAttribute('aria-expanded', String(isOpen));
       toggle.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
+      document.body.classList.toggle('nav-open', isOpen);
+    });
+
+    document.addEventListener('click', (e) => {
+      if (links.classList.contains('open') &&
+          !links.contains(e.target) && !toggle.contains(e.target)) {
+        links.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Abrir menu');
+        document.body.classList.remove('nav-open');
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && links.classList.contains('open')) {
+        links.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Abrir menu');
+        document.body.classList.remove('nav-open');
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 991.98) {
+        links.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Abrir menu');
+        document.body.classList.remove('nav-open');
+      }
     });
   }
 
   // ─── SCROLL ───
   const progressBar = document.getElementById('scrollProgress');
   const processSteps = document.querySelector('.process-steps');
+  const mobileCta = document.getElementById('mobileCtaBar');
 
   const onScroll = () => {
     const scrollY = window.scrollY;
@@ -23,6 +53,10 @@ document.addEventListener('DOMContentLoaded', function () {
       progressBar.style.width = Math.min((scrollY / docHeight) * 100, 100) + '%';
     }
     nav.classList.toggle('scrolled', scrollY > 80);
+    if (mobileCta) {
+      const nearBottom = scrollY > docHeight - window.innerHeight * 1.15;
+      mobileCta.classList.toggle('visible', scrollY > 600 && !nearBottom);
+    }
   };
 
   window.addEventListener('scroll', onScroll, { passive: true });
