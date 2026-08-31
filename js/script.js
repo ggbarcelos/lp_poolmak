@@ -151,6 +151,20 @@ document.addEventListener('DOMContentLoaded', function () {
   }, { threshold: 0.08 });
   revealElements.forEach(el => revealObserver.observe(el));
 
+  // ─── SCROLL ANIMATIONS (New) ───
+  const animElements = document.querySelectorAll(
+    '.anim-slide-up, .anim-slide-left, .anim-slide-right, .anim-fade-up'
+  );
+  const animObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        animObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  animElements.forEach(el => animObserver.observe(el));
+
   // ─── PROCESS CONNECTOR ───
   if (processSteps) {
     const stepsObserver = new IntersectionObserver((entries) => {
