@@ -2023,10 +2023,15 @@ h1 {
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 24px;
-  padding: 48px 40px;
+  padding: 40px 28px;
   text-align: center;
   transition: all 0.3s;
   backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 240px;
 }
 .result-card:hover {
   background: rgba(255, 255, 255, 0.15);
@@ -2035,38 +2040,41 @@ h1 {
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
 }
 .result-icon {
-  width: 72px;
-  height: 72px;
+  width: 64px;
+  height: 64px;
   background: rgba(26, 93, 175, 0.35);
-  border-radius: 18px;
+  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 28px;
+  margin: 0 auto 20px;
+  flex-shrink: 0;
 }
 .result-icon i {
-  font-size: 2rem;
+  font-size: 1.6rem;
   color: #fff;
 }
 .result-number {
   font-family: 'Montserrat', sans-serif;
   font-weight: 900;
-  font-size: 3.8rem;
+  font-size: 2.8rem;
   color: #fff;
   line-height: 1;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  white-space: nowrap;
 }
 .result-plus {
-  font-size: 2.2rem;
+  font-size: 1.6rem;
   color: var(--spark-lighter);
 }
 .result-text {
-  font-size: 1rem;
+  font-size: 0.82rem;
   color: rgba(255, 255, 255, 0.85);
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   font-weight: 600;
+  white-space: nowrap;
 }
 
 /* ── Testimonial Card ── */
@@ -2392,10 +2400,14 @@ h1 {
     gap: 24px;
   }
   .result-card {
-    padding: 36px 28px;
+    padding: 32px 24px;
+    min-height: 220px;
   }
   .result-number {
-    font-size: 2.8rem;
+    font-size: 2.4rem;
+  }
+  .result-plus {
+    font-size: 1.4rem;
   }
   .proposal-layout {
     grid-template-columns: 1fr;
@@ -2417,7 +2429,8 @@ h1 {
     gap: 20px;
   }
   .result-card {
-    padding: 32px 24px;
+    padding: 28px 20px;
+    min-height: 200px;
   }
   .result-number {
     font-size: 2.5rem;
